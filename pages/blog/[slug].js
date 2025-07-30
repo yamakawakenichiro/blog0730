@@ -1,19 +1,28 @@
-import { getPostBySlug, getAllSlugs } from "lib/api"
-import { extractText } from "lib/extract-text"
-import Meta from "components/meta"
-import Container from "components/container"
-import PostHeader from "components/post-header"
-import ConvertBody from "components/convert-body"
-import PostCategories from "components/post-categories"
-import Image from "next/image"
-import PostBody from "components/post-body"
-import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from "components/two-column"
-import { eyecatchLocal } from "lib/constants"
-import { getPlaiceholder } from "plaiceholder"
-import { prevNextPost } from "lib/prev-next-post"
-import Pagination from "components/pagination"
+import Image from 'next/image'
+import { getPlaiceholder } from 'plaiceholder'
+import Meta from 'components/meta'
+import Container from 'components/container'
+import PostHeader from 'components/post-header'
+import ConvertBody from 'components/convert-body'
+import PostCategories from 'components/post-categories'
+import Pagination from 'components/pagination'
+import PostBody from 'components/post-body'
+import { TwoColumn, TwoColumnMain, TwoColumnSidebar } from 'components/two-column'
+import { eyecatchLocal } from 'lib/constants'
+import { getPostBySlug, getAllSlugs } from 'lib/api'
+import { extractText } from 'lib/extract-text'
+import { prevNextPost } from 'lib/prev-next-post'
 
-export default function Post({ title, publish, content, eyecatch, categories, description, prevPost, nextPost }) {
+export default function Post({
+  title,
+  publish,
+  content,
+  eyecatch,
+  categories,
+  description,
+  prevPost,
+  nextPost,
+}) {
   return (
     <Container>
       <Meta
@@ -34,8 +43,8 @@ export default function Post({ title, publish, content, eyecatch, categories, de
             height={eyecatch.height}
             sizes="(min-width:1152px) 1152ex,100vw"
             style={{
-              width: "100%",
-              height: "auto",
+              width: '100%',
+              height: 'auto',
             }}
             priority
             placeholder="blur"

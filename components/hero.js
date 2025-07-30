@@ -1,6 +1,6 @@
-import Image from "next/image"
-import styles from "styles/hero.module.css"
-import cube from "images/cube.jpg"
+import Image from 'next/image'
+import styles from 'styles/hero.module.css'
+import world from 'images/world.png'
 
 export default function Hero({ title, subtitle, imageOn = false }) {
   return (
@@ -12,14 +12,14 @@ export default function Hero({ title, subtitle, imageOn = false }) {
       {imageOn && (
         <figure>
           <Image
-            src={cube}
+            src={world}
             alt=""
             width={1500}
             height={1300}
             sizes="(min-width:1152px)576px,(min-width:768px)50vw,100vw"
             style={{
-              width: "100%",
-              height: "auto",
+              width: '100%',
+              height: 'auto',
             }}
             priority
           />

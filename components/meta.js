@@ -1,8 +1,8 @@
-import Head from "next/head"
-import { siteMeta } from "lib/constants"
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { siteMeta } from 'lib/constants'
+import siteImg from 'images/ogp.jpg'
 const { siteTitle, siteDesc, siteUrl, siteLocale, siteType, siteIcon } = siteMeta
-import { useRouter } from "next/router"
-import siteImg from "images/ogp.jpg"
 
 export default function Meta({ pageTitle, pageDesc, pageImg, pageImgW, pageImgH }) {
   const title = pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle
@@ -13,7 +13,7 @@ export default function Meta({ pageTitle, pageDesc, pageImg, pageImgW, pageImgH 
   const img = pageImg || siteImg.src
   const imgW = pageImgW || siteImg.width
   const imgH = pageImgH || siteImg.height
-  const imgUrl = img.startsWith("https") ? img : `${siteUrl}${img}`
+  const imgUrl = img.startsWith('https') ? img : `${siteUrl}${img}`
   return (
     <Head>
       <title>{title}</title>
