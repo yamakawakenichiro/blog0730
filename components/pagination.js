@@ -10,14 +10,14 @@ export default function Pagination({ prevText = '', prevUrl = '', nextText = '',
         <li className={styles.prev}>
           <Link href={prevUrl} className={styles.iconText}>
             <FontAwesomeIcon icon={faChevronLeft} color="var(--gray-25)" />
-            <span>{prevText}</span>
+            <span>{prevText} Prev</span>
           </Link>
         </li>
       )}
       {nextText && nextUrl && (
         <li className={styles.next}>
           <Link href={nextUrl} className={styles.iconText}>
-            <span>{nextText}</span>
+            <span>Next {nextText}</span>
             <FontAwesomeIcon icon={faChevronRight} color="var(--gray-25)" />
           </Link>
         </li>
